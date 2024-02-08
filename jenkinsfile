@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag calculator calculator_instance:latest'
+                    sh 'docker tag calculator elysian01/calculator_instance:latest'
                     sh 'docker push calculator_instance'
                     }
                  }
